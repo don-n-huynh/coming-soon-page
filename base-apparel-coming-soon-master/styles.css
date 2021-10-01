@@ -1,0 +1,190 @@
+:root {
+  /* PRIMARY */
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+
+  /* NEUTRAL */
+  --dark-grey-red: hsl(0, 6%, 24%);
+
+  /* GRADIENTS */
+  --yellow-beg: hsl(0, 0%, 100%);
+  --yellow-end: hsl(0, 100%, 98%);
+  --orange-beg: hsl(0, 80%, 86%);
+  --orange-end: hsl(0, 74%, 74%);
+
+  /* FONT */
+  --body-font: 1.6rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 85%;
+}
+
+body {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
+  background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  overflow-x: hidden;
+}
+
+.container {
+}
+
+.cta-page {
+  width: 60%;
+  margin: 5rem auto;
+}
+
+.cta-page__head {
+  margin-bottom: 10rem;
+}
+
+.cta-page__title {
+  margin-bottom: 2rem;
+}
+
+.cta__page-primary {
+  font-size: 6rem;
+  letter-spacing: 1.7rem;
+  font-weight: 700;
+  color: var(--dark-grey-red);
+}
+
+.cta__page-primary--main {
+  font-weight: 300;
+  color: var(--desaturated-red);
+}
+
+.cta__page-body {
+  width: 80%;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: var(--desaturated-red);
+  margin-bottom: 5rem;
+}
+
+.cta-page__sign-up {
+  position: relative;
+}
+
+.cta-page__sign-up input {
+  color: var(--dark-grey-red);
+  padding: 2rem 3rem;
+  width: 80%;
+  outline: none;
+  border: 0.5px solid var(--desaturated-red);
+  border-radius: 50px;
+  letter-spacing: 1.1px;
+  font-weight: 400;
+}
+
+.cta-page__sign-up input::placeholder {
+  color: var(--desaturated-red);
+  font-size: 1.2rem;
+}
+
+.cta-page__sign-up button {
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(248, 191, 191),
+    rgba(238, 140, 140)
+  );
+  right: 5rem;
+}
+
+.cta-page__sign-up button:active {
+  background: linear-gradient(
+    to bottom right,
+    rgba(248, 191, 191, 0.9),
+    rgba(238, 140, 140, 0.9)
+  );
+  transform: scale(1.1);
+  box-shadow: 5px 3px 10px rgb(0, 0, 0, 0.3);
+}
+
+.cta-page__sign-up button .cta-page__model {
+  background-image: url("/images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.mobile-img {
+  display: none;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .cta-page {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  html {
+    font-size: 50%;
+  }
+
+  .cta-page {
+    width: 100%;
+    margin: 0;
+  }
+  .cta-page__model {
+    background-color: red;
+    background-image: url(./images/hero-mobile.jpg);
+    background-size: cover;
+  }
+
+  .cta-page__text {
+    width: 100%;
+    padding: 0 5rem 10rem 5rem;
+    text-align: center;
+  }
+
+  .cta__page-body {
+    width: 100%;
+  }
+
+  .cta-page__sign-up button {
+    right: 3rem;
+  }
+
+  .cta-page__head {
+    margin: 0;
+    padding: 4rem;
+  }
+
+  .mobile-img {
+    margin-bottom: 8rem;
+    width: 100%;
+    display: block;
+  }
+}
