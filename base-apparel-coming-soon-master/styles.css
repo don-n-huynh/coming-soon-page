@@ -29,9 +29,9 @@ html {
 }
 
 body {
-  height: 100%;
   display: grid;
   grid-template-columns: 55% 45%;
+  grid-template-rows: 1fr;
   font-family: "Josefin Sans", sans-serif;
   box-sizing: border-box;
   height: 100vh;
@@ -40,6 +40,7 @@ body {
 }
 
 .container {
+  height: 100%;
 }
 
 .cta-page {
@@ -121,11 +122,13 @@ body {
   box-shadow: 5px 3px 10px rgb(0, 0, 0, 0.3);
 }
 
-.cta-page__sign-up button .cta-page__model {
-  background-image: url("/images/hero-desktop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow-x: hidden;
+.cta-page__model {
+  height: 100%;
+}
+
+.cta-page__model-img {
+  height: 100%;
+  width: 100%;
 }
 
 .mobile-img {
@@ -137,8 +140,17 @@ body {
     font-size: 62.5%;
   }
 
+  body {
+  }
+
   .cta-page {
+    height: 60%;
     width: 75%;
+  }
+
+  .cta-page__model-img {
+    width: 100%;
+    height: 60%;
   }
 }
 
@@ -156,11 +168,6 @@ body {
   .cta-page {
     width: 100%;
     margin: 0;
-  }
-  .cta-page__model {
-    background-color: red;
-    background-image: url(./images/hero-mobile.jpg);
-    background-size: cover;
   }
 
   .cta-page__text {
@@ -186,5 +193,9 @@ body {
     margin-bottom: 8rem;
     width: 100%;
     display: block;
+  }
+
+  .cta-page__model {
+    display: none;
   }
 }
